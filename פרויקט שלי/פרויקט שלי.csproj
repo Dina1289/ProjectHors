@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{428C8ED5-5773-457A-9F23-66A021DD4CDA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>פרויקט_שלי</RootNamespace>
+    <AssemblyName>פרויקט שלי</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Area.cs" />
+    <Compile Include="BLL\AreaTable.cs" />
+    <Compile Include="BLL\BookingTrip.cs" />
+    <Compile Include="BLL\BookingTripTable.cs" />
+    <Compile Include="BLL\Cities.cs" />
+    <Compile Include="BLL\CitiesTable.cs" />
+    <Compile Include="BLL\CourseMeeting.cs" />
+    <Compile Include="BLL\Courses.cs" />
+    <Compile Include="BLL\CoursMeetingTable.cs" />
+    <Compile Include="BLL\CoursTable.cs" />
+    <Compile Include="BLL\ExtraForBooking.cs" />
+    <Compile Include="BLL\ExtraForBookingTable.cs" />
+    <Compile Include="BLL\ExtraforTrip.cs" />
+    <Compile Include="BLL\ExtraforTripTable.cs" />
+    <Compile Include="BLL\GeneralRow.cs" />
+    <Compile Include="BLL\GeneralTable.cs" />
+    <Compile Include="BLL\Horses.cs" />
+    <Compile Include="BLL\HorsesTable.cs" />
+    <Compile Include="BLL\HoursWorkTable.cs" />
+    <Compile Include="BLL\HoursWork.cs" />
+    <Compile Include="BLL\KindTrip.cs" />
+    <Compile Include="BLL\KindTripTable.cs" />
+    <Compile Include="BLL\MeetingForStudent.cs" />
+    <Compile Include="BLL\MeetingForStudentTable.cs" />
+    <Compile Include="BLL\MyDB.cs" />
+    <Compile Include="BLL\Payments.cs" />
+    <Compile Include="BLL\PaymentsTable.cs" />
+    <Compile Include="BLL\Referrer.cs" />
+    <Compile Include="BLL\ReferrerTable.cs" />
+    <Compile Include="BLL\Student.cs" />
+    <Compile Include="BLL\StudentTable.cs" />
+    <Compile Include="BLL\Teacher.cs" />
+    <Compile Include="BLL\TeacherTable.cs" />
+    <Compile Include="BLL\Trips.cs" />
+    <Compile Include="BLL\TripsTable.cs" />
+    <Compile Include="BLL\Validation.cs" />
+    <Compile Include="DAL\Connection.cs" />
+    <Compile Include="GUI\frMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frMain.Designer.cs">
+      <DependentUpon>frMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCAddNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCAddNote.Designer.cs">
+      <DependentUpon>UCAddNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCBooking.Designer.cs">
+      <DependentUpon>UCBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCBookingTrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCBookingTrip.Designer.cs">
+      <DependentUpon>UCBookingTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCGroup.Designer.cs">
+      <DependentUpon>UCGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCMAddCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCMAddCourse.Designer.cs">
+      <DependentUpon>UCMAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCManaagecourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCManaagecourse.Designer.cs">
+      <DependentUpon>UCManaagecourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCMannagerMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCMannagerMain.Designer.cs">
+      <DependentUpon>UCMannagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCMannageTrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCMannageTrip.Designer.cs">
+      <DependentUpon>UCMannageTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCPayment.Designer.cs">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCShowBookingGr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCShowBookingGr.Designer.cs">
+      <DependentUpon>UCShowBookingGr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCShowBookingPr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCShowBookingPr.Designer.cs">
+      <DependentUpon>UCShowBookingPr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCStudent%27sCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCStudent%27sCourse.Designer.cs">
+      <DependentUpon>UCStudent%27sCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCPersonalteacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCPersonalteacher.Designer.cs">
+      <DependentUpon>UCPersonalteacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCTripMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCTripMain.Designer.cs">
+      <DependentUpon>UCTripMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCAddTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCAddTeacher.Designer.cs">
+      <DependentUpon>UCAddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCMatchCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCMatchCourse.Designer.cs">
+      <DependentUpon>UCMatchCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCStudent.Designer.cs">
+      <DependentUpon>UCStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCTeacher.Designer.cs">
+      <DependentUpon>UCTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCTripPrivate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCTripPrivate.Designer.cs">
+      <DependentUpon>UCTripPrivate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCViewGBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCViewGBooking.Designer.cs">
+      <DependentUpon>UCViewGBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCViewPBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCViewPBooking.Designer.cs">
+      <DependentUpon>UCViewPBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCWorkHour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCWorkHour.Designer.cs">
+      <DependentUpon>UCWorkHour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frMain.resx">
+      <DependentUpon>frMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCAddNote.resx">
+      <DependentUpon>UCAddNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCBooking.resx">
+      <DependentUpon>UCBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCBookingTrip.resx">
+      <DependentUpon>UCBookingTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCGroup.resx">
+      <DependentUpon>UCGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCMAddCourse.resx">
+      <DependentUpon>UCMAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCManaagecourse.resx">
+      <DependentUpon>UCManaagecourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCMannagerMain.resx">
+      <DependentUpon>UCMannagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCMannageTrip.resx">
+      <DependentUpon>UCMannageTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCPayment.resx">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCShowBookingGr.resx">
+      <DependentUpon>UCShowBookingGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCShowBookingPr.resx">
+      <DependentUpon>UCShowBookingPr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCStudent%27sCourse.resx">
+      <DependentUpon>UCStudent%27sCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCPersonalteacher.resx">
+      <DependentUpon>UCPersonalteacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCTripMain.resx">
+      <DependentUpon>UCTripMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCAddTeacher.resx">
+      <DependentUpon>UCAddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCMatchCourse.resx">
+      <DependentUpon>UCMatchCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCStudent.resx">
+      <DependentUpon>UCStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCTeacher.resx">
+      <DependentUpon>UCTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCTripPrivate.resx">
+      <DependentUpon>UCTripPrivate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCViewGBooking.resx">
+      <DependentUpon>UCViewGBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCViewPBooking.resx">
+      <DependentUpon>UCViewPBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCWorkHour.resx">
+      <DependentUpon>UCWorkHour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\Horses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\תמונה3.png" />
+    <None Include="Resources\פלוס.png" />
+    <None Include="Resources\trashbin-icon-29.jpg" />
+    <None Include="Resources\pngegg.png" />
+    <None Include="Resources\תמונה8.png" />
+    <None Include="Resources\logo_2-01.png" />
+    <None Include="Resources\תמונה5.png" />
+    <None Include="Resources\תמונה 5.png" />
+    <None Include="Resources\תמונה12.png" />
+    <None Include="Resources\תמונה11.png" />
+    <None Include="Resources\תמונה2.png" />
+    <None Include="Resources\תמונה1.png" />
+    <None Include="Resources\brown-horse-stands-green-grass-before-house.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
